@@ -1,0 +1,32 @@
+#main-div{
+    margin: auto;
+    width: 500px;
+    height: auto;
+
+}
+
+#content-box{
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#createBtn{
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input{
+    height: 30px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+#back{
+    text-decoration-line: none;
+}
+
+
+
