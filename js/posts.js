@@ -20,9 +20,13 @@ async function fetchData() {
       <h1>${post.title}</h1>
       <h4>${post.author}</h4>
       <i>${post.date}</i>
-      <p>${post.content.substring(0, 100)}</p>
-      <a href="post.html?id=${post._id}">Read more...</a>
-      <p>${tags}</p>`;
+      <p>${post.content.substring(0, 100)}
+      <a href="post.html?id=${post._id}&content=${post.content}&title=${
+        post.title
+      }&author=${post.author}&date=${
+        post.date
+      }&tags=${tags}">Read more...</a></p>
+      <p><b>tags:</b> ${tags}</p>`;
     }
     content.innerHTML = blogContent;
   } catch (error) {
