@@ -16,7 +16,7 @@ async function fetchData() {
 
     let blogContent = "";
 
-    for (let post of data) {
+    for (let post of data.reverse()) {
       let tags = "";
       if (post.tags != null) {
         for (let tag of post.tags) {
