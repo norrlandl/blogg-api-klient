@@ -6,7 +6,44 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    Hej hej
+    <style>
+      table {
+        font-size: 14px;
+      }
+
+      td {
+        border: 1px solid black;
+        width: 200px;
+        text-align: center;
+      }
+
+      .first-tr {
+        height: 50px;
+        font-weight: bolder;
+        background-color: antiquewhite;
+      }
+    </style>
+    <a href="../index.html">Blog page</a>
+    <h1>Handle blog posts</h1>
+    <div class="content">
+      <a href="create-post.html">Create post</a>
+      <table id="table">
+        <tr class="first-tr">
+          <td>Title</td>
+          <td>Author</td>
+          <td>Date</td>
+          <td>Tags</td>
+          <td>Action</td>
+        </tr>
+        <!-- <tr>
+          <td>Title JS</td>
+          <td>Author JS</td>
+          <td>Date JS</td>
+          <td>Update / Delete button</td>
+        </tr> -->
+      </table>
+    </div>
+
     <script src="js/manage-posts.js"></script>
   </body>
 </html>
