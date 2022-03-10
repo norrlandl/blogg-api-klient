@@ -30,9 +30,9 @@ async function fetchData() {
       <td>${post.date}</td>
       <td>${tags}</td>
       <td>
-      <a href="update-post.html?id=${post._id}&content=${post.content}&title=${post.title}&author=${post.author}&date=${post.date}&tags=${tags}">Update</a> |
+      <a href="update-post.html?id=${post._id}">Update</a> |
       <br>
-      <a class="delete-pun" data-id="${post._id}" href="#">Delete</a>
+      <a class="delete-post" data-id="${post._id}" href="#">Delete</a>
       </td>
       </tr>`;
     }
@@ -41,12 +41,11 @@ async function fetchData() {
     console.log(error);
   }
 
-  // DELETE PUN
+  // DELETE POST
 
-  const deletePun = document.getElementsByClassName("delete-pun");
-  // console.log(deletePun);
+  const deletePost = document.getElementsByClassName("delete-post");
 
-  for (let link of deletePun) {
+  for (let link of deletePost) {
     link.addEventListener("click", async function (e) {
       e.preventDefault();
       try {
