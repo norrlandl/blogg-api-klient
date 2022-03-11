@@ -1,0 +1,50 @@
+#main-div{
+    margin: auto;
+    width: 500px;
+    height: auto;
+
+}
+#blog-page{
+    text-decoration-line: none;
+}
+
+#align-link{
+    text-align: right;
+}
+
+#content-box{
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+}
+
+#createBtn{
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input{
+    height: 30px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+#back{
+    text-decoration-line: none;
+}
+#tag-list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #333; 
+    border-radius: 10px;
+}
+
+
+
