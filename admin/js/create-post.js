@@ -13,9 +13,7 @@ let createBtn = document.getElementById("createBtn").addEventListener("click", f
     alert("Updated");
 
     total.title = document.getElementById("title-input").value 
-      
     total.author = document.getElementById("author-input").value
-  
     total.content = document.getElementById("content-box").value
   
 
