@@ -33,21 +33,6 @@ async function postData() {
       body: JSON.stringify(total),
     })
 
-    // console.log(data);
-
-    // let listOfTags = "";
-
-    // for (let post of data) {
-    //   let tags = "";
-    //   if (post.tags != null) {
-    //     for (let tag of post.tags) {
-    //       tags += `${tag} `;
-    //     }
-    //   }
-    //   listOfTags += `<li>${tags}</li>
-    //   `
-    // }
-    // tagList.innerHTML += listOfTags;
           } catch (error) {
         console.log(error);
       }
