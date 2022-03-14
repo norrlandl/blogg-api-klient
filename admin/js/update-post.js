@@ -2,7 +2,6 @@
 const queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 
-const id = urlParams.get("id");
 const tags = urlParams.get("tags");
 
 const formContent = document.querySelector(".form-content");
@@ -17,11 +16,12 @@ const fishing = document.getElementById("fishing");
 const cooking = document.getElementById("cooking");
 
 function checkCheckboxes(tags) {
+  // break if no tags
   if (tags === null) return;
   let tagsArray = tags.split(" ");
 
   tagsArray.forEach((tag) => {
-    if (tag.toLowerCase() === "sport") sports.click();
+    if (tag.toLowerCase() === "sports") sports.click();
     if (tag.toLowerCase() === "code") code.click();
     if (tag.toLowerCase() === "skiing") skiing.click();
     if (tag.toLowerCase() === "fishing") fishing.click();
@@ -29,48 +29,44 @@ function checkCheckboxes(tags) {
   });
 }
 
-function updatePost(e) {
-  e.preventDefault();
+function updatePost() {
+  formContent.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const formData = new FormData(e.target);
-  const tagsArray = () => {
-    let array = [];
-    if (sports.checked) array.push("Sports");
-    if (code.checked) array.push("Code");
-    if (skiing.checked) array.push("Skiing");
-    if (fishing.checked) array.push("Fishing");
-    if (cooking.checked) array.push("Cooking");
-    return array;
-  };
+    const formData = new FormData(e.target);
 
-  const body = {
-    title: formData.get("title"),
-    author: formData.get("author"),
-    content: formData.get("content"),
-    tags: tagsArray(),
-  };
+    const body = {
+      title: formData.get("title"),
+      author: formData.get("author"),
+      content: formData.get("content"),
+      tags: formData.getAll("tags"),
+    };
 
-  patchPost(id, body);
+    patchPost(urlParams.get("id"), body);
+  });
 }
 
-function patchPost(id, body) {
-  console.log(id, body);
+async function patchPost(id, body) {
   try {
-    fetch(`https://localhost:5000/posts/${id}`, {
+    // får SSL error med https ??
+    const response = await fetch(`http://localhost:5000/posts/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
+    if (!response.ok) {
+      throw new Error("Something went wrong with the API");
+    }
+    window.location.replace("index.html");
   } catch (error) {
     console.log(error);
   }
 }
 
 // Add content
-if (urlParams.get("author") != null) title.value = urlParams.get("title");
-if (urlParams.get("author") != null) author.value = urlParams.get("author");
-if (urlParams.get("content") != null)
-  content.innerHTML = urlParams.get("content");
-checkCheckboxes(tags);
+title.value = urlParams.get("title");
+author.value = urlParams.get("author");
+content.innerHTML = urlParams.get("content");
 
-formContent.addEventListener("submit", updatePost);
+checkCheckboxes(tags);
+updatePost(urlParams);
