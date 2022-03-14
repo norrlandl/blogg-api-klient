@@ -1,0 +1,15 @@
+table {
+  font-size: 14px;
+}
+
+td {
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+}
+
+.first-tr {
+  height: 50px;
+  font-weight: bolder;
+  background-color: antiquewhite;
+}
