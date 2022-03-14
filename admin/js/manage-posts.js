@@ -27,7 +27,9 @@ async function fetchData() {
       <td>${post.date.substring(0, 10)} | ${post.date.substring(11, 16)}</td>
       <td>${tags}</td>
       <td>
-      <a href="update-post.html?id=${post._id}">Update</a> |
+      <a href="update-post.html?id=${post._id}&content=${post.content}&title=${
+        post.title
+      }&author=${post.author}&date=${post.date}&tags=${tags}">Update</a> |
       <br>
       <a class="delete-post" data-id="${post._id}" href="#">Delete</a>
       </td>
