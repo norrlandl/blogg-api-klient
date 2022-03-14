@@ -1,39 +1,36 @@
 window.onload = function(){
-}
-
-let tagList = document.getElementById("tag-list")
-let back = document.getElementById("back")
-let total = {
-  title: "", author: "", content: "",
-}
+  const form = document.getElementById("main-div")
+  form.addEventListener("submit", postData)
+};
 
 
-let createBtn = document.getElementById("createBtn").addEventListener("click", function(e){
+function postData(e) {
     e.preventDefault;
-    alert("Updated");
 
-    total.title = document.getElementById("title-input").value 
-    total.author = document.getElementById("author-input").value
-    total.content = document.getElementById("content-box").value
-  
-
-console.log(total);
-postData();
-})
-
-async function postData() {
-
+    const formData = new FormData(e.target);
+    let total = {
+      title: formData.get("title"), 
+      author: formData.get("author"), 
+      content: formData.get("content"), 
+      tags: formData.getAll("tags"),
+    };
+    
+    console.log(total);
+    
   try {
     fetch("http://localhost:5000/posts", {
       method: "POST",
       headers:{ "Content-Type": "application/json",
       },
       body: JSON.stringify(total),
-    })
+    });
 
-          } catch (error) {
-        console.log(error);
-      }
+    window.location.replace("../index.html");
+
+  } catch (error) {
+  console.log(error);
+  }
+
+  
 }
-
 

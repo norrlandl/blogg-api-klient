@@ -6,27 +6,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="main-div">
-    <div id="align-link"><a id="blog-page" href="url">Blog Page</a></div>
+<form id="main-div">
+    <div id="align-link"><a id="blog-page" href="../index.html">Blog Page</a></div>
     <hr>
     <h1>New Post</h1>
     <h4>Title</h4>
-    <input placeholder="Title..." class="input" id="title-input">
+    <input name="title" placeholder="Title..." class="input" id="title-input">
     <h4>Author</h4>
-    <input placeholder="Author..." class="input" id="author-input">
+    <input name="author" placeholder="Author..." class="input" id="author-input">
     <h4>Content</h4>
-    <textarea placeholder="Content..." id="content-box"></textarea>
+    <textarea name="content" placeholder="Content..." id="content-box"></textarea>
     <h4>Tags</h4>
-    <div id="tag-list"><br>
+    <div id="tag-list">
+        <ul>
+            <li><input type="checkbox" name="tags" id="tag1" value="Code"><label>Sports</label></li>
+            <li><input type="checkbox" name="tags" id="tag2" value="Code"><label>Code</label></li>
+            <li><input type="checkbox" name="tags" id="tag3" value="Code"><label>Skiing</label></li>
+            <li><input type="checkbox" name="tags" id="tag4" value="Code"><label>Fishing</label></li>
+            <li><input type="checkbox" name="tags" id="tag5" value="Code"><label>Cooking</label></li>
+        </ul>
     </div>
 
+        <input type="submit" value="Create" id="createBtn" />
 
-<button id="createBtn">Create</button><br>
+    <a id="back" href="index.html">← Back</a>
 
-
-<a id="back" href="url">← Back</a>
-
-</div>
+</form>
     <script src="js/create-post.js"></script>
 </body>
 </html>
