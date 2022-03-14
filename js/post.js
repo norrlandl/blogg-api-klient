@@ -1,4 +1,4 @@
- window.onload = function () {
+window.onload = function () {
 const queryString = window.location.search;  
 let urlParams = new URLSearchParams(queryString);
 
@@ -44,4 +44,4 @@ fetchData();
     }
   }
 
-} 
+}
