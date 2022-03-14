@@ -1,11 +1,51 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="./index.html">Admin</a>
+      <form class="form-content">
+        <label for="title">Title</label>
+        <div class="row">
+          <input id="title" name="title" type="text" />
+        </div>
+        <label for="author">Author</label>
+        <div class="row">
+          
+          <input id="author" name="author" type="text" />
+        </div>
+        <label for="content">Content</label>
+        <div class="row">
+          
+          <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <div class="row">
+          <label for="sports">Sports</label>
+          <input type="checkbox" name="sports" id="sports" value="Sports">
+        </div>
+        <div class="row">
+          <label for="code">Code</label>
+          <input type="checkbox" name="code" id="code" value="Code">
+        </div>
+        <div class="row">
+          <label for="skiing">Skiing</label>
+          <input type="checkbox" name="skiing" id="skiing" value="Skiing">
+        </div>
+        <div class="row">
+          <label for="fishing">Fishing</label>
+          <input type="checkbox" name="fishing" id="fishing" value="Fishing">
+        </div>
+        <div class="row">
+          <label for="cooking">Cooking</label>
+          <input type="checkbox" name="cooking" id="cooking" value="Cooking">
+        </div>
+        <input type="submit"></input>
+      </form>
+    </div>
     <script src="js/update-post.js"></script>
-</body>
+  </body>
 </html>
