@@ -13,7 +13,7 @@ async function fetchData() {
       let tags = "";
       if (post.tags != null) {
         for (let tag of post.tags) {
-          tags += `${tag} `;
+          tags += `${tag}, `;
         }
       }
       blogContent += `
@@ -26,7 +26,7 @@ async function fetchData() {
       }&author=${post.author}&date=${
         post.date
       }&tags=${tags}">Read more...</a></p>
-      <p><b>tags:</b> ${tags}</p>`;
+      <p><b>tags:</b> ${tags.slice(0, tags.length - 2)}</p>`;
     }
     content.innerHTML = blogContent;
   } catch (error) {
