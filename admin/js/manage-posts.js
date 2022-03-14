@@ -11,12 +11,9 @@ async function fetchData() {
     const response = await fetch("http://localhost:5000/posts");
     const data = await response.json();
 
-    console.log(data);
-    console.log(data[3]._id);
-
     let blogContent = "";
 
-    for (let post of data) {
+    for (let post of data.reverse()) {
       let tags = "";
       if (post.tags != null) {
         for (let tag of post.tags) {
@@ -27,12 +24,14 @@ async function fetchData() {
       <tr>
       <td>${post.title}</td>
       <td>${post.author}</td>
-      <td>${post.date}</td>
+      <td>${post.date.substring(0, 10)} | ${post.date.substring(11, 16)}</td>
       <td>${tags}</td>
       <td>
-      <a href="update-post.html?id=${post._id}&content=${post.content}&title=${post.title}&author=${post.author}&date=${post.date}&tags=${tags}">Update</a> |
+      <a href="update-post.html?id=${post._id}&content=${post.content}&title=${
+        post.title
+      }&author=${post.author}&date=${post.date}&tags=${tags}">Update</a> |
       <br>
-      <a class="delete-pun" data-id="${post._id}" href="#">Delete</a>
+      <a class="delete-post" data-id="${post._id}" href="#">Delete</a>
       </td>
       </tr>`;
     }
@@ -41,12 +40,11 @@ async function fetchData() {
     console.log(error);
   }
 
-  // DELETE PUN
+  // DELETE POST
 
-  const deletePun = document.getElementsByClassName("delete-pun");
-  // console.log(deletePun);
+  const deletePost = document.getElementsByClassName("delete-post");
 
-  for (let link of deletePun) {
+  for (let link of deletePost) {
     link.addEventListener("click", async function (e) {
       e.preventDefault();
       try {
