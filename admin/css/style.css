@@ -1,9 +1,19 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+
+.form-content {
+  margin: 100px auto;
+}
+
 #main-div{
     margin: auto;
     width: 500px;
     height: auto;
-
 }
+
 #blog-page{
     text-decoration-line: none;
 }
@@ -45,6 +55,3 @@
     border: 2px solid #333; 
     border-radius: 10px;
 }
-
-
-
