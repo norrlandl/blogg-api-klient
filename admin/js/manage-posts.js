@@ -41,7 +41,6 @@ async function fetchData() {
   }
 
   // DELETE POST
-
   const deletePost = document.getElementsByClassName("delete-post");
 
   for (let link of deletePost) {

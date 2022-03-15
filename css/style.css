@@ -1,15 +1,14 @@
-#main-div{
-    width: 500px;
-    height: auto;
-    margin: auto;
-    }
-    
-    #align-link{
-        text-align: right;
-        
-    }
-    
-    #back,
-    #blog-page{
-        text-decoration-line: none;
-    }
+#main-div {
+  width: 500px;
+  height: auto;
+  margin: auto;
+}
+
+#align-link {
+  text-align: right;
+}
+
+#back,
+#blog-page {
+  text-decoration-line: none;
+}
