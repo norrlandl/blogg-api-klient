@@ -1,22 +1,17 @@
 window.onload = function () {
-const queryString = window.location.search;  
-let urlParams = new URLSearchParams(queryString);
+  const queryString = window.location.search;
+  let urlParams = new URLSearchParams(queryString);
 
-// console.log(urlParams.get("title"));
-// console.log(urlParams.get("author"));
-// console.log(urlParams.get("id"));
+  // ALT 1
+  // document.querySelector("#post-content").innerHTML = `
+  // <h1>${urlParams.get("title")}</h1>
+  // <i>${urlParams.get("author")}</i> | ${urlParams.get("date").substring(0, 10)}</i>
+  // <p><b>Tags:</b> ${urlParams.get("tags")}</p>
+  // <h3>${urlParams.get("content")}</h3>
+  // `
 
-// ALT 1
-// document.querySelector("#post-content").innerHTML = `
-// <h1>${urlParams.get("title")}</h1>
-// <i>${urlParams.get("author")}</i> | ${urlParams.get("date").substring(0, 10)}</i>
-// <p><b>Tags:</b> ${urlParams.get("tags")}</p>
-// <h3>${urlParams.get("content")}</h3>
-// `
-
-// ALT 2
-
-fetchData();
+  // ALT 2
+  fetchData();
 
   async function fetchData() {
     try {
@@ -43,5 +38,4 @@ fetchData();
       console.log(error);
     }
   }
-
-}
+};
