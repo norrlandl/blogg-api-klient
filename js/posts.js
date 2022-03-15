@@ -35,3 +35,5 @@ async function fetchData() {
 }
 
 fetchData();
+
+// <i>${post.date.replace("T", " | ").slice(0, post.date.length - 6)}</i>
