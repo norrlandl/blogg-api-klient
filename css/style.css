@@ -1,3 +1,8 @@
+body{
+  font-family: sans-serif;
+  background-color: rgba(243, 237, 237, 0.795);
+}
+
 #main-div {
   width: 500px;
   height: auto;
@@ -11,4 +16,5 @@
 #back,
 #blog-page {
   text-decoration-line: none;
+  color: #333;
 }
