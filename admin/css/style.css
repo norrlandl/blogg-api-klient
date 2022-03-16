@@ -1,26 +1,33 @@
-body{
+body {
   font-family: sans-serif;
   background-color: rgba(243, 237, 237, 0.795);
   color: #333;
   font-size: 14px;
 }
 
-h1,h4{
-  margin-bottom: 7;
-  margin-top: 25;
-  
+h1,
+h4 {
+  margin-bottom: 7px;
+  margin-top: 25px;
 }
-
 
 table {
   font-size: 14px;
 }
 
-
 td {
   border: 1px solid black;
   width: 200px;
   text-align: center;
+}
+
+a {
+  text-decoration-line: none;
+  color: #333;
+}
+
+a:hover {
+  color: darkgray;
 }
 
 .first-tr {
@@ -33,28 +40,47 @@ td {
   width: 100vw;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
 }
 
-.form-content {
+.content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#table tr a {
+  color: rgb(49, 49, 160);
+}
+
+#table tr a:hover {
+  color: blue;
+}
+
+/* .form-content {
   margin: 100px auto;
-}
+} */
 
-#main-div {
+.main-div {
   margin: auto;
   width: 500px;
   height: auto;
 }
 
-#blog-page {
-  text-decoration-line: none;
-}
-
-#align-link {
+.align-link {
   text-align: right;
   padding-top: 15px;
 }
 
-#content-box {
+/* #content-box {
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  border-color: gray;
+  border-width: 2px;
+} */
+
+.content-box {
   width: 500px;
   height: 200px;
   border-radius: 10px;
@@ -62,12 +88,22 @@ td {
   border-width: 2px;
 }
 
-#author-input,
-#title-input{
+.author-input,
+.title-input {
   border: 2px solid gray;
 }
 
-#createBtn {
+/* #createBtn {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-color: gray;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+} */
+
+.submit {
   width: 500px;
   height: 30px;
   border-radius: 10px;
@@ -89,32 +125,25 @@ ul {
   padding: 0;
 }
 
-#back {
+/* #back {
+  padding-bottom: 30px;
+} */
+
+.back {
   padding-bottom: 30px;
 }
-#tag-list {
+
+/* #tag-list {
+  margin-top: 10px;
+  margin-bottom: 20px;
+} */
+
+.tags-list {
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-#back,
-#blog-page {
-  text-decoration-line: none;
-  color: #333;
+.tags {
+  margin-bottom: 5px;
+  accent-color: gray;
 }
-
-#back:hover,
-#blog-page:hover {
-  color: darkgray;
-}
-
-#tag1,#tag2,
-#tag3,#tag4,
-#tag5 {
-margin-bottom: 5px;
-accent-color: gray;
-}
-
-
-
-
