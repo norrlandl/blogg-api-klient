@@ -1,6 +1,6 @@
 "use strict";
 
-const content = document.querySelector(".content");
+const content = document.querySelector(".posts");
 
 async function fetchData() {
   try {
@@ -17,16 +17,18 @@ async function fetchData() {
         }
       }
       blogContent += `
-      <h1>${post.title}</h1>
-      <h4>${post.author}</h4>
-      <i>${post.date.substring(0, 10)} | ${post.date.substring(11, 16)}</i>
-      <p>${post.content.substring(0, 100)}
-      <a href="post.html?id=${post._id}&content=${post.content}&title=${
+      <div class="post">
+        <h1>${post.title}</h1>
+        <h4>${post.author}</h4>
+        <i>${post.date.substring(0, 10)} | ${post.date.substring(11, 16)}</i>
+        <p>${post.content.substring(0, 100)}
+        <a href="post.html?id=${post._id}&content=${post.content}&title=${
         post.title
       }&author=${post.author}&date=${
         post.date
       }&tags=${tags}">Read more...</a></p>
-      <p><b>tags:</b> ${tags.slice(0, tags.length - 2)}</p>`;
+        <p><b>tags:</b> ${tags.slice(0, tags.length - 2)}</p>
+      </div>`;
     }
     content.innerHTML = blogContent;
   } catch (error) {

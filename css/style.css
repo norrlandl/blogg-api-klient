@@ -1,20 +1,56 @@
-body{
+body {
   font-family: sans-serif;
   background-color: rgba(243, 237, 237, 0.795);
+  color: #333;
+  font-size: 14px;
 }
 
-#main-div {
+.main-div {
   width: 500px;
   height: auto;
   margin: auto;
 }
 
-#align-link {
+.align-link {
   text-align: right;
 }
 
-#back,
-#blog-page {
+.back,
+.blog-page {
   text-decoration-line: none;
   color: #333;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post {
+  margin-bottom: 50px;
+  max-width: 700px;
+}
+
+.post h1,
+.post h4 {
+  margin-bottom: 7px;
+  margin-top: 25px;
+}
+
+.post i {
+  margin: 5px 0px;
+}
+
+.post p {
+}
+
+.posts {
+  margin-top: 50px;
 }

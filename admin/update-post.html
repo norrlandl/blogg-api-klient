@@ -6,46 +6,47 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <a href="./index.html">Admin</a>
-      <form class="form-content">
-        <label for="title">Title</label>
-        <div class="row">
-          <input id="title" name="title" type="text" />
+      <form class="main-div">
+        <div class="align-link">
+          <a href="../index.html">Blog Page</a>
         </div>
-        <label for="author">Author</label>
-        <div class="row">
-          
-          <input id="author" name="author" type="text" />
+        <hr />
+        <h1>Update Post</h1>
+        <h4>Title</h4>
+        <input class="input title-input" id="title" name="title" type="text" />
+        <h4>Author</h4>
+        <input class="input title-input" id="author" name="author" type="text" />
+        <h4>Content</h4>
+        <textarea class="content-box" name="content" id="content" cols="30" rows="10"></textarea>
+        <h4>Tags</h4>
+        <div class="tags-list" id="tag-list">
+          <ul>
+            <li>
+              
+              <input class="tags" type="checkbox" name="tags" id="sports" value="Sports">
+              <label for="sports">Sports</label>
+            </li>
+            <li>
+              <input class="tags" type="checkbox" name="tags" id="code" value="Code">
+              <label for="code">Code</label>
+            </li>
+            <li>
+              <input class="tags" type="checkbox" name="tags" id="skiing" value="Skiing">
+              <label for="skiing">Skiing</label>
+            </li>
+            <li>
+              <input class="tags" type="checkbox" name="tags" id="fishing" value="Fishing">
+              <label for="fishing">Fishing</label>
+            </li>
+            <li>
+              <input class="tags" type="checkbox" name="tags" id="cooking" value="Cooking">
+              <label for="cooking">Cooking</label>
+            </li>
+          </ul>
         </div>
-        <label for="content">Content</label>
-        <div class="row">
-          
-          <textarea name="content" id="content" cols="30" rows="10"></textarea>
-        </div>
-        <div class="row">
-          <label for="sports">Sports</label>
-          <input type="checkbox" name="tags" id="sports" value="Sports">
-        </div>
-        <div class="row">
-          <label for="code">Code</label>
-          <input type="checkbox" name="tags" id="code" value="Code">
-        </div>
-        <div class="row">
-          <label for="skiing">Skiing</label>
-          <input type="checkbox" name="tags" id="skiing" value="Skiing">
-        </div>
-        <div class="row">
-          <label for="fishing">Fishing</label>
-          <input type="checkbox" name="tags" id="fishing" value="Fishing">
-        </div>
-        <div class="row">
-          <label for="cooking">Cooking</label>
-          <input type="checkbox" name="tags" id="cooking" value="Cooking">
-        </div>
-        <input type="submit" value="update"></input>
+        <input class="submit" type="submit" value="Update"></input>
+        <a class="back" id="back" href="index.html">← Back</a>
       </form>
-    </div>
     <script src="js/update-post.js"></script>
   </body>
 </html>
