@@ -17,7 +17,7 @@ async function fetchData() {
       let tags = "";
       if (post.tags != null) {
         for (let tag of post.tags) {
-          tags += `${tag} `;
+          tags += `${tag}, `;
         }
       }
       blogContent += `
@@ -25,7 +25,7 @@ async function fetchData() {
       <td>${post.title}</td>
       <td>${post.author}</td>
       <td>${post.date.substring(0, 10)} | ${post.date.substring(11, 16)}</td>
-      <td>${tags}</td>
+      <td>${tags.slice(0, tags.length - 2)}</td>
       <td>
       <a href="update-post.html?id=${post._id}&content=${post.content}&title=${
         post.title
