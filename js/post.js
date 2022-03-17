@@ -31,7 +31,7 @@ window.onload = function () {
       document.querySelector("#post-content").innerHTML = `
       <h1>${data.title}</h1>
       <i>${data.author} | ${dateTime}</i>
-      <p><b>tags:</b> ${tags.slice(0, tags.length - 2)}</p>
+      <p><b>Tags:</b> ${tags.slice(0, tags.length - 2)}</p>
       <p> ${data.content}</p>
       `;
     } catch (error) {

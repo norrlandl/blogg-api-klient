@@ -26,8 +26,8 @@ async function fetchData() {
         post.title
       }&author=${post.author}&date=${
         post.date
-      }&tags=${tags}">Read more...</a></p>
-        <p><b>tags:</b> ${tags.slice(0, tags.length - 2)}</p>
+      }&tags=${tags}"><br><br><b>Read more...</b></a></p>
+        <p><b>Tags:</b> ${tags.slice(0, tags.length - 2)}</p>
       </div>`;
     }
     content.innerHTML = blogContent;

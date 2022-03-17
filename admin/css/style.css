@@ -16,7 +16,7 @@ table {
 }
 
 td {
-  border: 1px solid black;
+  border: 1px solid lightgray;
   width: 200px;
   text-align: center;
 }
@@ -33,7 +33,9 @@ a:hover {
 .first-tr {
   height: 50px;
   font-weight: bolder;
-  background-color: antiquewhite;
+  background-color: darkgray;
+  color: white;
+  font-size: large;
 }
 
 .container {
@@ -50,11 +52,11 @@ a:hover {
 }
 
 #table tr a {
-  color: rgb(49, 49, 160);
+  color: black;
 }
 
 #table tr a:hover {
-  color: blue;
+  color: darkgray;
 }
 
 /* .form-content {
@@ -67,9 +69,13 @@ a:hover {
   height: auto;
 }
 
-.align-link {
+#align-link {
   text-align: right;
   padding-top: 15px;
+}
+
+#space{
+ padding-right: 15px;
 }
 
 /* #content-box {
@@ -147,3 +153,4 @@ ul {
   margin-bottom: 5px;
   accent-color: gray;
 }
+

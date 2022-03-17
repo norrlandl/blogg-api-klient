@@ -29,7 +29,7 @@ async function fetchData() {
       <td>
       <a href="update-post.html?id=${post._id}&content=${post.content}&title=${
         post.title
-      }&author=${post.author}&date=${post.date}&tags=${tags}">Update</a> |
+      }&author=${post.author}&date=${post.date}&tags=${tags}">Update</a> 
       <br>
       <a class="delete-post" data-id="${post._id}" href="#">Delete</a>
       </td>

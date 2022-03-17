@@ -5,14 +5,16 @@ body {
   font-size: 14px;
 }
 
-.main-div {
+#main-div {
   width: 500px;
   height: auto;
   margin: auto;
 }
 
-.align-link {
+
+#align-link {
   text-align: right;
+  padding-top: 15px;
 }
 
 .back,
@@ -48,9 +50,16 @@ body {
   margin: 5px 0px;
 }
 
-.post p {
-}
-
 .posts {
   margin-top: 50px;
 }
+
+a {
+  text-decoration-line: none;
+  color: #333;
+}
+a:hover {
+  color: darkgray;
+}
+
+
