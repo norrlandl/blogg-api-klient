@@ -18,7 +18,7 @@ const cooking = document.getElementById("cooking");
 function checkCheckboxes(tags) {
   // break if no tags
   if (tags === null) return;
-  let tagsArray = tags.split(" ");
+  let tagsArray = tags.split(", ");
 
   tagsArray.forEach((tag) => {
     if (tag.toLowerCase() === "sports") sports.click();
