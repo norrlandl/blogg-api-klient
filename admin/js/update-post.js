@@ -2,7 +2,7 @@
 const queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 
-const tags = urlParams.get("tags");
+let tags = urlParams.get("tags");
 
 const formContent = document.querySelector(".main-div");
 const title = document.getElementById("title");
@@ -19,6 +19,11 @@ function checkCheckboxes(tags) {
   // break if no tags
   if (tags === null) return;
   let tagsArray = tags.split(", ");
+  tagsArray[tagsArray.length - 1] = tagsArray[tagsArray.length - 1].slice(
+    0,
+    -1
+  );
+  console.log("array:", tagsArray);
 
   tagsArray.forEach((tag) => {
     if (tag.toLowerCase() === "sports") sports.click();
