@@ -1,5 +1,5 @@
 window.onload = function () {
-  const form = document.getElementById("main-div");
+  const form = document.querySelector(".main-div");
   form.addEventListener("submit", postData);
 };
 

@@ -4,7 +4,7 @@ let urlParams = new URLSearchParams(queryString);
 
 const tags = urlParams.get("tags");
 
-const formContent = document.querySelector(".form-content");
+const formContent = document.querySelector(".main-div");
 const title = document.getElementById("title");
 const author = document.getElementById("author");
 const content = document.getElementById("content");
