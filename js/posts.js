@@ -21,7 +21,7 @@ async function fetchData() {
         <h1>${post.title}</h1>
         <h4>${post.author}</h4>
         <i>${post.date.substring(0, 10)} | ${post.date.substring(11, 16)}</i>
-        <p>${post.content.substring(0, 100)}
+        <p>${post.content.substring(0, 100).trim()}...
         <a href="post.html?id=${post._id}&content=${post.content}&title=${
         post.title
       }&author=${post.author}&date=${
